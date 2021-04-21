@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Mads.css">
+	<title>Mads</title>
+</head>
+<body>
+	<center style="height:2px;margin-top: 30px">
+		<input class="inp" type="number" placeholder="row" id="row" name="">
+<button onclick="dis()">display</button>
+<input type="number" class="inp" id="col" placeholder="col" name="">
+<select id="sele">
+	<option value="+" id="add">Addition</option>
+	<option value="*" id="mul">Multiplication</option>
+	<option value="-" id="sub">Substraction</option>
+	<option value="/" id="div">Divition</option>
+</select>
+</center>
+<div id="sho"></div>
+
+ <script>
+         var in1=row.value
+         var in2=col.value
+         var sum=sele.value;
+
+ 
+       function dis(){
+        var sum=sele.value;
+          var show ="<table border='1'>"
+          show+="<tr>"
+            for (i=1; i<=col.value; i++){
+               
+                show+="<td>"
+              for (o=1; o<=row.value; o++ ){
+                 var cal=    eval(i+sum+o)
+                if ( cal % 1 !==0) {
+                    var cal=   parseFloat( eval(i+sum+o)).toFixed(2)
+                }
+            show += i+sum+o+ "=" + cal +"<br>"
+              }
+            show+="</td>"
+           }
+           show+="</tr>"
+           show+="</table>"
+        sho.innerHTML = show
+    } 
+       
+     </script>
+</body>
+
+</html>

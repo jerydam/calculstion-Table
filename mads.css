@@ -1,0 +1,18 @@
+body{
+	background-image: url(bab.jpeg);
+	background-size: cover;
+}
+.inp{
+	width: 100px;
+	background-color: red;
+	border-radius: 30px;
+	color: white;
+	border-color: blue;
+}
+#sho{
+	color: yellow;
+	margin-top: 50px;
+}
+table{
+	background-color: blue;
+}
